@@ -16,7 +16,7 @@ print("MAE:", mae)
 print("R2 Score:", r2)
 
 
-download a csv file of predicted prices for test csv:
+#download a csv file of predicted prices for test csv:
 
 import pandas as pd
 import numpy as np
@@ -44,3 +44,4 @@ submission_df = pd.DataFrame({
 # Save CSV
 submission_df.to_csv("/kaggle/working/XGBoost_mlp_predictions.csv", index=False)
 print("✅ Predictions saved to tabnet_test_predictions.csv")
+
