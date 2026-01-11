@@ -118,12 +118,18 @@ If:
 
 ## Key Learnings
 1.Multimodal feature extraction using NLP and Computer Vision
+
 2.Embedding-based representation learning
+
 3.Cross-modal feature fusion
+
 4.Regression modeling using gradient boosting
+
 5.Working with GPU-based environments on Kaggle
 
 ## Future Improvements
 1.Fine-tuning text and image encoders end-to-end
+
 2.Experimenting with attention-based multimodal fusion
+
 3.Deploying the model as an inference API
