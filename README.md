@@ -116,22 +116,14 @@ If:
    pip install -r requirements.txt
 
 
-Key Learnings
+## Key Learnings
+1.Multimodal feature extraction using NLP and Computer Vision
+2.Embedding-based representation learning
+3.Cross-modal feature fusion
+4.Regression modeling using gradient boosting
+5.Working with GPU-based environments on Kaggle
 
-Multimodal feature extraction using NLP and Computer Vision
-
-Embedding-based representation learning
-
-Cross-modal feature fusion
-
-Regression modeling using gradient boosting
-
-Working with GPU-based environments on Kaggle
-
-Future Improvements
-
-Fine-tuning text and image encoders end-to-end
-
-Experimenting with attention-based multimodal fusion
-
-Deploying the model as an inference API
+## Future Improvements
+1.Fine-tuning text and image encoders end-to-end
+2.Experimenting with attention-based multimodal fusion
+3.Deploying the model as an inference API
