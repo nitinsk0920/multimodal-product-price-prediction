@@ -1,0 +1,16 @@
+__pycache__/
+.ipynb_checkpoints/
+.env
+.venv/
+venv/
+
+data/
+datasets/
+embeddings/
+models/
+*.npy
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.csv
