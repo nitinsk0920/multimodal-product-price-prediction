@@ -1,4 +1,4 @@
-TRAIN IMAGE EMBEDDINGS:
+#TRAIN IMAGE EMBEDDINGS:
 
 
 import os
@@ -62,7 +62,7 @@ np.save("/kaggle/working/image_embeddings.npy", image_embeddings)
 print("✅ Saved image embeddings successfully!")
 
 
-TEST IMAGE EMBEDDINGS:
+#TEST IMAGE EMBEDDINGS:
 
 from torchvision import transforms
 
@@ -128,4 +128,5 @@ print("✅ Image embeddings shape:", image_embeddings.shape)
 
 np.save("/kaggle/working/image_test_embeddings.npy", image_embeddings)
 print("✅ Saved image embeddings successfully!")
+
 
