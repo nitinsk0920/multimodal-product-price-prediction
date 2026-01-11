@@ -114,3 +114,24 @@ If:
 1. Install required dependencies:
    ```bash
    pip install -r requirements.txt
+
+
+Key Learnings
+
+Multimodal feature extraction using NLP and Computer Vision
+
+Embedding-based representation learning
+
+Cross-modal feature fusion
+
+Regression modeling using gradient boosting
+
+Working with GPU-based environments on Kaggle
+
+Future Improvements
+
+Fine-tuning text and image encoders end-to-end
+
+Experimenting with attention-based multimodal fusion
+
+Deploying the model as an inference API
