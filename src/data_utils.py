@@ -1,4 +1,4 @@
-DOWNLOAD TRAIN SET IMAGES FROM THE URL
+#DOWNLOAD TRAIN SET IMAGES FROM THE URL
 
 import os
 import pandas as pd
@@ -9,12 +9,10 @@ from functools import partial
 from pathlib import Path
 import time
 
-# ============== CONFIG ======================
 train_csv_path = "/kaggle/input/mlhack/train.csv"
 train_image_folder = "/kaggle/working/train_images"
 IMAGE_COLUMN = "image_link"
 MAX_WORKERS = min(64, cpu_count())  # Adjust concurrency
-# ============================================
 
 # Create directories
 os.makedirs(train_image_folder, exist_ok=True)
@@ -30,9 +28,7 @@ train_links = train_df[IMAGE_COLUMN].dropna().unique().tolist()
 print(f"Train images to download: {len(train_links)}")
 
 
-# ======================================================
-# 🧩 Function to download a single image robustly
-# ======================================================
+
 def download_image(image_url, save_folder):
     try:
         filename = Path(image_url).name
@@ -56,9 +52,7 @@ def download_image(image_url, save_folder):
         return f"fail_{str(e)[:40]}"
 
 
-# ======================================================
-# 🧠 Parallel Downloader
-# ======================================================
+
 def parallel_download(image_links, folder):
     print(f"📥 Starting downloads → {folder}")
     start = time.time()
@@ -77,9 +71,7 @@ def parallel_download(image_links, folder):
     return ok, fail
 
 
-# ======================================================
-# 🚀 Run Train + Test Downloads
-# ======================================================
+
 ok_train, fail_train = parallel_download(train_links, train_image_folder)
 
 print("\n📊 FINAL STATS:")
@@ -91,7 +83,7 @@ print(f"\n🖼️ Train images in folder: {len(os.listdir(train_image_folder))}"
 
 
 
-Mapping downloaded train images to their corresponding text(catalog_content) and url
+#Mapping downloaded train images to their corresponding text(catalog_content) and url
 import pandas as pd
 import os
 
@@ -112,7 +104,7 @@ train_df = train_df[train_df["exists"] == True].reset_index(drop=True)
 print("✅ Final usable samples:", len(train_df))
 
 
-DOWNLOAD TEST SET IMAGES FROM THE URL:
+#DOWNLOAD TEST SET IMAGES FROM THE URL:
 import os
 import pandas as pd
 import requests
@@ -122,12 +114,10 @@ from functools import partial
 from pathlib import Path
 import time
 
-# ============== CONFIG ======================
 train_csv_path = "/kaggle/input/mlhack/test.csv"
 train_image_folder = "/kaggle/working/test_images"
 IMAGE_COLUMN = "image_link"
 MAX_WORKERS = min(64, cpu_count())  # Adjust concurrency
-# ============================================
 
 # Create directories
 os.makedirs(train_image_folder, exist_ok=True)
@@ -143,9 +133,7 @@ train_links = train_df[IMAGE_COLUMN].dropna().unique().tolist()
 print(f"Train images to download: {len(train_links)}")
 
 
-# ======================================================
-# 🧩 Function to download a single image robustly
-# ======================================================
+
 def download_image(image_url, save_folder):
     try:
         filename = Path(image_url).name
@@ -168,10 +156,6 @@ def download_image(image_url, save_folder):
     except Exception as e:
         return f"fail_{str(e)[:40]}"
 
-
-# ======================================================
-# 🧠 Parallel Downloader
-# ======================================================
 def parallel_download(image_links, folder):
     print(f"📥 Starting downloads → {folder}")
     start = time.time()
@@ -190,9 +174,7 @@ def parallel_download(image_links, folder):
     return ok, fail
 
 
-# ======================================================
-# 🚀 Run Train + Test Downloads
-# ======================================================
+
 ok_train, fail_train = parallel_download(train_links, train_image_folder)
 
 print("\n📊 FINAL STATS:")
@@ -202,7 +184,7 @@ print(f"Train → Downloaded: {ok_train}, Failed: {fail_train}")
 print(f"\n🖼️ Train images in folder: {len(os.listdir(train_image_folder))}")
 
 
-Mapping downloaded test images to their corresponding text(catalog_content) and url
+#Mapping downloaded test images to their corresponding text(catalog_content) and url
 
 import pandas as pd
 import os
@@ -221,3 +203,4 @@ image_folder = "/kaggle/working/test_images"
 train_df["exists"] = train_df["image_name"].apply(lambda x: os.path.exists(os.path.join(image_folder, x)))
 train_df = train_df[train_df["exists"] == True].reset_index(drop=True)
 print("✅ Final usable samples:", len(train_df))
+
