@@ -1,0 +1,12 @@
+```txt
+numpy
+pandas
+scikit-learn
+xgboost
+torch
+torchvision
+transformers
+tqdm
+matplotlib
+opencv-python
+h5py
