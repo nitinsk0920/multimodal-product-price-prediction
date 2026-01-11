@@ -143,7 +143,7 @@ print("Train engineered numeric features:", train_features_path)
 print("Test text embeddings:", test_text_emb_path)
 print("Test engineered numeric features:", test_features_path)
 
-for test set:
+##FOR TEST SET EMBEDS:
 
 import os
 import re
@@ -255,4 +255,5 @@ test_features = save_engineered_features(test_df, test_features_path, text_col=T
 print("✅ Test embeddings and features saved.")
 print("Test text embeddings:", test_text_emb_path)
 print("Test engineered numeric features:", test_features_path)
+
 
